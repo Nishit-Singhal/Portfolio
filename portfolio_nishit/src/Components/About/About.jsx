@@ -12,9 +12,9 @@ const About = () => {
           I’m a passionate Frontend Developer with a keen eye for design and a strong foundation in web technologies. Proficient in React, JavaScript, HTML, CSS, and modern UI frameworks, I specialize in building interactive, responsive, and user-friendly web applications.
 
           <br /><br />
-          🚀 <strong>Skills:</strong> React.js, JavaScript (ES6+), Tailwind CSS, UI/UX Design
+          🔹 <strong>Skills:</strong> React.js, JavaScript (ES6+), Tailwind CSS, UI/UX Design
           <br />
-          ⚡ <strong>Passionate About:</strong> Clean code, pixel-perfect design, seamless user interactions, and continuous learning.
+          🔹 <strong>Passionate About:</strong> Clean code, pixel-perfect design, seamless user interactions, and continuous learning.
         </>
       )
     },
@@ -41,9 +41,9 @@ const About = () => {
           I’m an enthusiastic Machine Learning practitioner with a strong foundation in Python and data science libraries. I enjoy exploring patterns in data, building predictive models, and deriving actionable insights through well-crafted algorithms.
 
           <br /><br />
-          📊 <strong>Skills:</strong> Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn
+          🔹 <strong>Skills:</strong> Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn
           <br />
-          🤖 <strong>Passionate About:</strong> Data-driven decision making, model optimization, insightful visualizations, and continuous upskilling
+          🔹 <strong>Passionate About:</strong> Data-driven decision making, model optimization, insightful visualizations, and continuous upskilling
         </>
       )
     }
