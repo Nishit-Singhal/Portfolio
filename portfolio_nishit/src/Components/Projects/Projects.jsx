@@ -16,8 +16,11 @@ function Projects() {
                 <p className='text-sm  leading-relaxed text-gray-300 whitespace-pre-line'>
                     A personal portfolio website showcasing my skills, projects, and experiences. Built using React and Tailwind CSS.
                 </p>
+                <a href="https://github.com/Nishit-Singhal/Portfolio" className='flex justify-center w-full' target="_blank">
                 <button className='bg-[#465697] border-solid border-white rounded-2xl p-2 mt-5 text-sm md:text-lg hover:opacity-85
-                duration:300 hover:scale-105 font-semibold'>Source Code</button>
+                duration:300 hover:scale-105 font-semibold'>
+                    
+                    Source Code</button></a>
             </li>
             <li className='flex flex-col max-w-70 bg-gray-900/80 rounded-xl p-2 shadow-md'>
                 <img src={card_img} className='rounded-xl'></img>
@@ -28,8 +31,11 @@ function Projects() {
                 <p className='text-sm leading-relaxed text-gray-300 whitespace-pre-line'>
                     A dynamic eCommerce platform front-end development project using React, that allows individuals and businesses to create and manage online stores.
                 </p>
+                <a href="https://github.com/vtyagi26/Lilypad_frontend" className='flex justify-center w-full' target='_blank'>
                 <button className='bg-[#465697] border-solid border-white rounded-2xl p-2 mt-5 text-sm md:text-lg hover:opacity-85
-                duration:300 hover:scale-105 font-semibold'>Source Code</button>
+                duration:300 hover:scale-105 font-semibold'>
+                
+                    Source Code</button></a>
             </li>
             <li className='flex flex-col max-w-70 bg-gray-900/80 rounded-xl p-2 shadow-md'>
                 <img src={card_img} className='rounded-xl'></img>
@@ -40,8 +46,10 @@ function Projects() {
                 <p className='text-sm leading-relaxed text-gray-300 whitespace-pre-line'>
                     An AI-powered travel assistant project focused on user journey planning and personalized travel recommendations.
                 </p>
+                <a href="https://github.com/Nishit-Singhal/Gaman" className='flex justify-center w-full' target='_blank'>
                 <button className='bg-[#465697] border-solid border-white rounded-2xl p-2 mt-5 text-sm md:text-lg hover:opacity-85
-                duration:300 hover:scale-105 font-semibold'>Source Code</button>
+                duration:300 hover:scale-105 font-semibold'>
+                    Source Code</button></a>
             </li>
         </ul>
     </div>
