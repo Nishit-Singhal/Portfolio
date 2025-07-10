@@ -11,16 +11,23 @@ function Projects() {
                 <img src={card_img} className='rounded-xl'></img>
                 <br></br>
                 <h3 className='text-lg font-semibold text-indigo-300 mb-2'>
-                    Project 1: Personal Portfolio Website
+                    Project 1: Stock-Wise
                 </h3>
                 <p className='text-sm  leading-relaxed text-gray-300 whitespace-pre-line'>
-                    A personal portfolio website showcasing my skills, projects, and experiences. Built using React and Tailwind CSS.
+                    A real-time platform for stock prediction and analysis. Built using React and Tailwind CSS and twelvedata API.
                 </p>
-                <a href="https://github.com/Nishit-Singhal/Portfolio" className='flex justify-center w-full' target="_blank">
+                <div className='flex flex-row items-center'>
+                <a href="https://github.com/Nishit-Singhal/stock-predictor" className='flex justify-center w-full' target="_blank">
                 <button className='bg-[#465697] border-solid border-white rounded-2xl p-2 mt-5 text-sm md:text-lg hover:opacity-85
                 duration:300 hover:scale-105 font-semibold'>
                     
                     Source Code</button></a>
+                <a href="https://stock-predictor-eight.vercel.app/" className='flex justify-center w-full' target="_blank">
+                <button className='bg-[#465697] border-solid border-white rounded-2xl p-2 mt-5 text-sm md:text-lg hover:opacity-85
+                duration:300 hover:scale-105 font-semibold'>
+                    
+                    Website Link</button></a>
+                </div>
             </li>
             <li className='flex flex-col max-w-70 bg-gray-900/80 rounded-xl p-2 shadow-md'>
                 <img src={card_img} className='rounded-xl'></img>
@@ -41,12 +48,12 @@ function Projects() {
                 <img src={card_img} className='rounded-xl'></img>
                 <br/>
                 <h3 className='text-lg  font-semibold text-indigo-300 mb-2'>
-                    Project 3: Gaman AI-Powered Travel Assistant
+                    Project 3: SMS Spam Detection System
                 </h3>
                 <p className='text-sm leading-relaxed text-gray-300 whitespace-pre-line'>
-                    An AI-powered travel assistant project focused on user journey planning and personalized travel recommendations.
+                    An SMS Spam Detection system which uses Machine Learning (Naive Bayes Algorithm), achieving an accuracy of over 97% on real-world SMS datasets.
                 </p>
-                <a href="https://github.com/Nishit-Singhal/Gaman" className='flex justify-center w-full' target='_blank'>
+                <a className='flex justify-center w-full' >
                 <button className='bg-[#465697] border-solid border-white rounded-2xl p-2 mt-5 text-sm md:text-lg hover:opacity-85
                 duration:300 hover:scale-105 font-semibold'>
                     Source Code</button></a>
