@@ -5,41 +5,61 @@ import react from "./react.png"
 import python from "./python.png"
 import c from "./c.png"
 import cpp from "./cpp.png"
-import java from "./java.png"
+import tensorflow from "./tensorflow.png"
 import sql from "./sql.png"
 import html from "./html.png"
 import css from "./css.png"
+import Reveal from "../Reveal/Reveal"
 
 const Skills = () => {
   const skills = [
-    { src: css, alt: 'CSS' },
-    { src: html, alt: 'HTML' },
-    { src: js, alt: 'JavaScript' },
-    { src: tailwind, alt: 'Tailwind CSS' },
-    { src: react, alt: 'React' },
-    { src: python, alt: 'Python' },
-    { src: c, alt: 'C' },
-    { src: cpp, alt: 'C++' },
-    { src: java, alt: 'Java' },
-    { src: sql, alt: 'SQL' }
+    { src: css, alt: 'CSS', tone: 'from-cyan-300/25 to-blue-400/10' },
+    { src: html, alt: 'HTML', tone: 'from-orange-300/25 to-amber-400/10' },
+    { src: js, alt: 'JavaScript', tone: 'from-yellow-300/25 to-amber-400/10' },
+    { src: tailwind, alt: 'Tailwind CSS', tone: 'from-sky-300/25 to-cyan-400/10' },
+    { src: react, alt: 'React', tone: 'from-cyan-300/25 to-slate-200/10' },
+    { src: python, alt: 'Python', tone: 'from-blue-300/25 to-yellow-300/10' },
+    { src: c, alt: 'C', tone: 'from-indigo-300/25 to-slate-200/10' },
+    { src: cpp, alt: 'C++', tone: 'from-blue-300/25 to-cyan-300/10' },
+    { src: tensorflow, alt: 'TensorFlow', tone: 'from-red-300/25 to-orange-300/10' },
+    { src: sql, alt: 'SQL', tone: 'from-emerald-300/25 to-teal-300/10' }
   ]
 
   return (
-    <div id="Skills" className='text-white shadow-lg mx-auto w-full max-w-5xl rounded-2xl p-4 sm:p-8 md:p-10 font-sans  flex flex-col items-center'>
-      <h1 className='text-3xl md:text-4xl font-extrabold border-b-4 border-white pb-3 mb-8 text-left tracking-wide w-full'>
-        Skills
-      </h1>
-      <div className='w-full flex justify-center'>
-        <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-x-8 gap-y-10 justify-items-center w-full max-w-4xl'>
+    <section id="Skills" className="section-shell px-4 py-8 md:px-0 md:py-12">
+      <Reveal className="section-card p-6 md:p-10">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span className="section-label">Skills</span>
+            <h2 className="section-heading">Technologies I rely on to ship end-to-end work.</h2>
+          </div>
+          <p className="max-w-xl text-sm leading-7 text-slate-300">
+            My toolkit spans frontend development, programming fundamentals, data work, and practical
+            problem solving for both product and ML projects.
+          </p>
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {skills.map((skill, index) => (
-            <div key={index} className='bg-black/80 hover:bg-gradient-to-tr hover:from-blue-700 hover:to-purple-700 transition-all duration-300 rounded-3xl p-3 sm:p-4 w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 flex items-center justify-center shadow-md hover:shadow-xl hover:scale-110'>
-              <img src={skill.src} alt={skill.alt} className='w-10 h-10 sm:w-12 sm:h-12 md:w-20 md:h-20 object-contain' />
-            </div>
+            <Reveal
+              key={skill.alt}
+              delay={index * 70}
+              className={`group hover-lift rounded-[28px] border border-white/10 bg-gradient-to-br ${skill.tone} p-[1px] transition duration-300`}
+            >
+              <div className="flex h-full min-h-[150px] flex-col items-center justify-center rounded-[27px] bg-slate-950/85 px-4 py-6 text-center">
+                <img
+                  src={skill.src}
+                  alt={skill.alt}
+                  className="h-14 w-14 object-contain transition duration-300 group-hover:scale-110"
+                />
+                <p className="mt-4 text-sm font-semibold text-slate-100">{skill.alt}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
-      </div>
-    </div>
+      </Reveal>
+    </section>
   )
 }
 
-export default Skills;
+export default Skills

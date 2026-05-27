@@ -1,28 +1,51 @@
 import React, { useState } from 'react'
-import {RiMenu2Line,RiCloseLine} from '@remixicon/react'
+import { RiMenu2Line, RiCloseLine } from '@remixicon/react'
+
 const Navbar = () => {
-    const [menu,openMenu]=useState(false);
-    const [showMenu,setShowMenu]=useState(true);
+  const [menu, setMenu] = useState(false)
+  const navLinks = ["About", "Skills", "Projects", "Contact"]
+
   return (
-    <nav className='flex flex-wrap justify-between md:items-center text-white px-10 pt-6 md:px-20 bg-[#465697] pb-4'>
-        <a href="/"><span className='md:text-4xl text-xl font-bold tracking-wide'>Portfolio</span></a>
-        <ul className={`${
-            menu ? "block": "hidden"
-            }   mx-24 py-2 mt-4 font-semibold md:mt-5 bg-black px-2 rounded-xl bg-opacity-30 
-        md:border-none text-center md:bg-transparent md:static md:mx-0 md:flex gap-6`}>
-            <a href="#About"><li className='text-md transition-all duration-300 p-1 md:p-0 hover:text-3xl md:text-xl'>About</li></a>
-            <a href="#Skills"><li className='text-md transition-all duration-300 p-1 md:p-0 hover:text-3xl md:text-xl'>Skills</li></a>
-            <a href="#Projects"><li className='text-md transition-all duration-300 p-1 md:p-0 hover:text-3xl md:text-xl'>Projects</li></a>
-            <a href="#Contact"><li className='text-md transition-all duration-300 p-1 md:p-0 hover:text-3xl md:text-xl'>Contact</li></a>
+    <header className="sticky top-0 z-30 px-3 py-3 md:px-6">
+      <nav className="section-shell section-card animate-fade-up flex flex-wrap items-center justify-between px-5 py-4 md:px-8">
+        <a href="#Home" className="flex items-center gap-3 transition duration-300 hover:scale-[1.02]">
+          <span className="glow-pulse flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-300 via-blue-400 to-teal-300 text-lg font-bold text-slate-950">
+            NS
+          </span>
+          <div>
+            <p className="font-['Space_Grotesk'] text-lg font-bold tracking-wide text-white md:text-xl">
+              Nishit Singhal
+            </p>
+            
+          </div>
+        </a>
+
+        <button
+          type="button"
+          className="rounded-2xl border border-white/10 bg-white/5 p-2 text-white md:hidden"
+          onClick={() => setMenu(!menu)}
+          aria-label="Toggle navigation menu"
+        >
+          {menu ? <RiCloseLine size={26} /> : <RiMenu2Line size={26} />}
+        </button>
+
+        <ul
+          className={`${menu ? "flex" : "hidden"} mt-4 w-full flex-col gap-3 rounded-3xl border border-white/10 bg-slate-950/80 p-4 text-sm font-semibold backdrop-blur-xl md:mt-0 md:flex md:w-auto md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`}
+        >
+          {navLinks.map((link) => (
+            <li key={link}>
+              <a
+                href={`#${link}`}
+                className="block rounded-full px-4 py-2 text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:bg-white/8 hover:text-cyan-200"
+                onClick={() => setMenu(false)}
+              >
+                {link}
+              </a>
+            </li>
+          ))}
         </ul>
-        {showMenu ? (
-            <RiMenu2Line size={30} className="md:hidden absolute right-10 top-6 transition-all duration-300 " 
-            onClick={() => {openMenu(!menu); setShowMenu(!showMenu);}}/>
-        ) : (
-            <RiCloseLine  size={30} className="md:hidden absolute right-10 top-6 transition-all duration-300 " 
-            onClick={() => {openMenu(!menu); setShowMenu(!showMenu);}}/>
-        )}
-    </nav>
+      </nav>
+    </header>
   )
 }
 
