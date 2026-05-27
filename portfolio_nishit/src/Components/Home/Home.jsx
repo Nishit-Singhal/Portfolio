@@ -7,7 +7,7 @@ const Home = () => {
         <h1 className='text-3xl md:text-6xl font-bold flex leading-normal tracking-tighter animate-fade-in-down'>
           Hello! I am Nishit
         </h1>
-        <p className='text-sm md:text-xl tracking-tight '>I am Nishit Singhal, a 2nd Year student pursuing B-Tech CSE 
+        <p className='text-sm md:text-xl tracking-tight '>I am Nishit Singhal, a 3rd Year student pursuing B-Tech CSE 
             From Delhi Technological University. My Objective is to use my skills in Computer Science, which 
             include experience with Web Development, Python, Data Analysis, Machine Learning, and C/C++ in challenging environments
             where there is ample room to grow and innovate, making an impact with projects that lead to moving forward 
